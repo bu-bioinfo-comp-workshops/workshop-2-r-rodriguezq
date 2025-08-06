@@ -1,0 +1,14 @@
+#!/bin/bash
+#PBS -N analyze_large_genome
+#PBS -l walltime=01:00:00
+#PBS -l mem=8gb
+#PBS -o ../results/analysis_output.log
+#PBS -e ../results/analysis_error.log
+#PBS -V
+
+cd $PBS_O_WORKDIR/src
+
+# Activate your environment if needed (e.g., conda)
+# source activate myenv
+
+python analyze_large_genome.py
